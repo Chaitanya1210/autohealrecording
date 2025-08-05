@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Elements with Locators</title>
+    <style>
+        /* CSS Selectors */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            border: 1px solid #aaa;
+            padding: 5px;
+        }
+
+        .btn-primary {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        #submitBtn:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sample Form for Locators</h1>
+
+    <form action="#" method="post" id="sampleForm" name="sampleForm">
+        
+        <!-- Text Input using ID -->
+        <div class="form-group">
+            <label for="username">Username (ID):</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+        </div>
+
+        <!-- Text Input using Class -->
+        <div class="form-group">
+            <label for="email">Email (Class):</label>
+            <input type="text" class="email-input" name="email" placeholder="Enter your email">
+        </div>
+
+        <!-- Radio Buttons using Name -->
+        <div class="form-group">
+            <label>Gender (Name):</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+
+        <!-- Checkbox using Attribute Selector -->
+        <div class="form-group">
+            <label>Interests (Attribute selector):</label><br>
+            <input type="checkbox" name="interest" value="coding" data-type="interest">
+            <label>Coding</label><br>
+            <input type="checkbox" name="interest" value="music" data-type="interest">
+            <label>Music</label>
+        </div>
+
+        <!-- Input with CSS Selector -->
+        <div class="form-group">
+            <label for="password">Password (CSS Selector):</label>
+            <input type="password" name="password" class="form-control password" placeholder="Enter password">
+        </div>
+
+        <!-- Submit Button using ID and Class -->
+        <div class="form-group">
+            <button type="submit" id="submitBtn" class="btn-primary">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>
